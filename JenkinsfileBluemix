@@ -33,7 +33,7 @@ podTemplate(label: 'pod',
                     BX_REGISTRY=`cat /var/run/configs/bluemix-target/bluemix-registry`
                     BX_NAMESPACE=`cat /var/run/configs/bluemix-target/bluemix-registry-namespace`
 
-                    #bx login -a \${BX_API_ENDPOINT}
+                    bx login -a \${BX_API_ENDPOINT}
 
                     # initialize docker using container registry secret
                     bx cr login

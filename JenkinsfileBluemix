@@ -25,7 +25,8 @@ podTemplate(label: 'pod',
                 stage ('Push Docker Image to Registry') {
                     sh """
                     #!/bin/bash
-                    export BLUEMIX_API_KEY=`cat /var/run/secrets/bluemix-api-key/api-key`
+                    #export BLUEMIX_API_KEY=`cat /var/run/secrets/bluemix-api-key/api-key`
+                    export BLUEMIX_API_KEY='ShJcQPaDx1i5RUwq3RQgC9UWTNE580Pob1JDGdfkegKM'
                     BX_ORG=`cat /var/run/configs/bluemix-target/bluemix-org`
                     BX_SPACE=`cat /var/run/configs/bluemix-target/bluemix-space`
                     BX_API_ENDPOINT=`cat /var/run/configs/bluemix-target/bluemix-api-endpoint`
